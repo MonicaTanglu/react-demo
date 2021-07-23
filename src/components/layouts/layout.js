@@ -3,11 +3,11 @@
  */
 import React from 'react';
 // 路由
-import { Link } from 'react-router';
+import { Link } from 'react-router-dom';
 // Menu 导航菜单 Icon 图标
 import { Menu } from 'antd';
-import { BookOutlined, UserOutlined } from '@ant-design/icons'
-import './layout.scss';
+import { BookOutlined, UserOutlined,HomeOutlined,SettingOutlined } from '@ant-design/icons'
+import './layout.less';
 
 // 左侧菜单栏
 const SubMenu = Menu.SubMenu;
@@ -24,6 +24,9 @@ class HomeLayout extends React.Component {
         <main className="main">
           <div className="menu">
             <Menu mode="inline" theme="dark" style={{ width: '240' }}>
+              <Menu.Item key="home" icon={<HomeOutlined />}>
+                <Link to="/">首页</Link>
+              </Menu.Item>
               <SubMenu key="user" title={<span><UserOutlined /><span>用户管理</span></span>}>
                 <Menu.Item key="user-list">
                   <Link to="/user/list">用户列表</Link>
@@ -39,6 +42,11 @@ class HomeLayout extends React.Component {
                 </Menu.Item>
                 <Menu.Item key="book-add">
                   <Link to="/book/add">添加图书</Link>
+                </Menu.Item>
+              </SubMenu>
+              <SubMenu key="system" title={<span><SettingOutlined /><span>系统管理</span></span>}>
+                <Menu.Item key="system-menu">
+                  <Link to="/system/menu">菜单管理</Link>
                 </Menu.Item>
               </SubMenu>
             </Menu>

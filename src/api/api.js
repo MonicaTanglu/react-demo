@@ -1,5 +1,5 @@
 import { axios } from "./instance"
-import Vue from 'vue'
+// import Vue from 'vue'
 import { mimeType } from './mimeType.js'
 
 export function getAction (url, params) {
@@ -62,7 +62,7 @@ export function downFile (url, parameter) {
 export function downloadFile (url, fileName, parameter = {}, fileSuffix = null) {
   return downFile(url, parameter).then((data) => {
     if (!data || data.size === 0) {
-      Vue.prototype['$message'].warning('文件下载失败')
+      // Vue.prototype['$message'].warning('文件下载失败')
       return
     }
     let type = null
@@ -100,4 +100,4 @@ export function getFileAccessHttpUrl (avatar, subStr) {
   }
 }
 
-export const getPermissionList = () => getAction(`/api/public/user/permissions`, {customResolve: true})
+export const getPermissionList = () => getAction(`/permissions`, {customResolve: true})

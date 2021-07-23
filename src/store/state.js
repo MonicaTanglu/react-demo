@@ -1,4 +1,2 @@
-export default {
-    pageTitle: '首页',
-    infoList: []
-}
+
+export const menus = store => store.permission

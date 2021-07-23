@@ -4,7 +4,7 @@ import { message, notification } from 'antd'
 import store from '../store'
 
 const service = axios.create({
-    baseURL: '/internet',
+    baseURL: 'http://localhost:7300/mock/60f78a6703424b0664e2c221/react',
     timeout: 30000
 })
 // 拦截器
