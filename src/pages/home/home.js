@@ -1,7 +1,7 @@
 import React from 'react';
 import './home.less'; 
-import { getPermissions } from '@/store/actions'
-import { connect } from 'react-redux'
+// import { getPermissions } from '@/store/actions'
+// import { connect } from 'react-redux'
 
 class HomePage extends React.Component {
     constructor(props) {
@@ -18,5 +18,5 @@ class HomePage extends React.Component {
         )
     }
 }
-export default connect(null,{getPermissions})(HomePage)
-// export default HomePage;
+// export default connect(null,{getPermissions})(HomePage)
+export default HomePage;
