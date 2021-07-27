@@ -1,5 +1,5 @@
 import { combineReducers } from 'redux'
-import permission from './permission'
+import * as permissions from './permission'
 
 
-export default combineReducers({ permission })
+export default combineReducers({ ...permissions })

@@ -3,10 +3,12 @@ const initialState = {
     menus: []
 }
 
-async function permission (state = initialState, action) {
+export const menus = (state = initialState, action) => {
+    debugger
     switch (action.type) {
         case 'GET_MENU':
             const menus = action.menus;
+            console.log('action.menu', menus)
             return {
                 ...state,
                 menus: menus
@@ -17,4 +19,4 @@ async function permission (state = initialState, action) {
 
     }
 }
-export default permission
+// export default permission
